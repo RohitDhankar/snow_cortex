@@ -5,3 +5,4 @@ __pycache__/
 
 # local dev - config DIR
 /config/
+/data_dir_local/
