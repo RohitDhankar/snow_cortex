@@ -1,0 +1,2 @@
+_11_03_2024_19:17:51 - DEBUG -_Name: sn_cortex.py -_Meth_Name: get_conn() -_Line: 60 -_Log_Message:  -init-st.session_state.CONN-->> <snowflake.connector.connection.SnowflakeConnection object at 0x7f332d8436b0>
+_11_03_2024_19:17:51 - DEBUG -_Name: sn_cortex.py -_Meth_Name: get_conn() -_Line: 60 -_Log_Message:  -init-st.session_state.CONN-->> <snowflake.connector.connection.SnowflakeConnection object at 0x7f332d8436b0>
