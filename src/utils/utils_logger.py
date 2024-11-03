@@ -35,7 +35,7 @@ def setup_logger(module_name=None): #, folder_name=None):
         # if not os.path.exists(os.path.join(hourly_log_path, module_name)):
         #     os.makedirs(os.path.join(hourly_log_path, module_name))
     if module_name:
-        module_log_file_name = "ollama_app_log_"+hour_now+"00h_" 
+        module_log_file_name = "cortex_analyst_app_log_"+hour_now+"00h_" 
         module_log_file = os.path.join(LOGS_PATH, f'{module_log_file_name}.log')
      
 
@@ -43,7 +43,7 @@ def setup_logger(module_name=None): #, folder_name=None):
         'version': 1,
         "disable_existing_loggers": False,
         "formatters": {
-            "ollama_log_format": {
+            "cortex_analyst_log_format": {
                 "format": "%(asctime)s - %(levelname)s -_Name: %(filename)s -_Meth_Name: "
                           "%(funcName)s() -_Line: %(lineno)d -_Log_Message:  %(message)s",
                 "datefmt": "_%m_%d_%Y_%H:%M:%S"
@@ -53,7 +53,7 @@ def setup_logger(module_name=None): #, folder_name=None):
             'common_handler': {
                 "class": "logging.handlers.TimedRotatingFileHandler",
                 "level": LOG_LEVEL,
-                "formatter": "ollama_log_format",
+                "formatter": "cortex_analyst_log_format",
                 "filename": module_log_file,
                 "when": "midnight",
                 "interval": 1,
@@ -74,7 +74,7 @@ def setup_logger(module_name=None): #, folder_name=None):
         module_handler = {
             'class': 'logging.FileHandler',
             'level': LOG_LEVEL,
-            'formatter': "ollama_log_format",
+            'formatter': "cortex_analyst_log_format",
             'filename': module_log_file
         }
         module_logger = {
@@ -88,4 +88,3 @@ def setup_logger(module_name=None): #, folder_name=None):
 
     logging.config.dictConfig(cnfg_dict)
     return logging.getLogger(module_name)
-
